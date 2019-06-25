@@ -4,8 +4,8 @@
 int main() {
 
     return 0;
-}
-Hola 
+} 
+#Cómo hacesmo el trabajo?
 //int main()
 //{
 //    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
