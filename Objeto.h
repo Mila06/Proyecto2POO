@@ -1,7 +1,5 @@
-#ifndef AGREGACION_OBJETO_H
-#define AGREGACION_OBJETO_H
-
-
+#ifndef PROYECTO_2_OBJETO_H
+#define PROYECTO_2_OBJETO_H
 #include <iostream>
 #include "Tipos.h"
 
@@ -31,62 +29,61 @@ public:
 };
 
 class restaurante: public Objeto{
-    private:
-        string tipoComida;
-        string especialidaD;
-    public:
-        restaurante(const TipoString& nombre, TipoCaracter color,
-           TipoEntero posX, TipoEntero posY, double calificacion, string tipoComida, string especialidaD);
-        virtual ~restaurante();
-        void settipoComida( string _tipoComida){
-            tipoComida= _tipoComida;
-        }
-        string gettipoComida(){
-            return tipoComida;
-        }
-        void setespecialidaD ( string _especialidaD){
-            especialidaD= _especialidaD;
-        }
-        string especialidaD(){
-            return especialidaD;
-        }
-    
-}
+private:
+    string tipoComida;
+    string especialidaD;
+public:
+    restaurante(const TipoString& nombre, TipoCaracter color,
+                TipoEntero posX, TipoEntero posY, double calificacion, string tipoComida, string especialidaD);
+    virtual ~restaurante();
+    void settipoComida( string _tipoComida){
+        tipoComida= _tipoComida;
+    }
+    string gettipoComida(){
+        return tipoComida;
+    }
+    void setespecialidaD ( string _especialidaD){
+        especialidaD= _especialidaD;
+    }
+    string getespecialidaD(){
+        return especialidaD;
+    }
+
+};
 class hoteles: public Objeto{
-    private:
-        double estrellas;
-        int disponibilidad;
-    public:
-        virtual ~hoteles();
-        hoteles(const TipoString& nombre, TipoCaracter color,
-           TipoEntero posX, TipoEntero posY, double calificacion, double estrellas, int disponibilidad);
-        void setestrellas(double _estellas){
-            estrellas= _estrellas;
-        }
-        double getestrellas(){
-            return estrellas;
-        }
-        void setdisponibilidad( int _disponibilidad){
-            disponibilidad= _disponibilidad
-        }
-        int getdisponibilidad(){
-            return disponibilidad;
-        }
-}
+private:
+    double estrellas;
+    int disponibilidad;
+public:
+    virtual ~hoteles();
+    hoteles(const TipoString& nombre, TipoCaracter color,
+            TipoEntero posX, TipoEntero posY, double calificacion, double estrellas, int disponibilidad);
+    void setestrellas(double _estrellas){
+        estrellas= _estrellas;
+    }
+    double getestrellas(){
+        return estrellas;
+    }
+    void setdisponibilidad( int _disponibilidad){
+        disponibilidad= _disponibilidad
+    }
+    int getdisponibilidad(){
+        return disponibilidad;
+    }
+};
 class museo: public Objeto{
-    private:
-        string exposicionA;
-    public:
-        virtual ~museo();
-        museo(const TipoString& nombre, TipoCaracter color,
-           TipoEntero posX, TipoEntero posY, double calificacion, string exposicionA);
-        void setexposicionA( string _exposicionA){
-            exposiicionA= _exposicionA}
-        string getexposicionA(){
-            return exposicionA;
-        }
-}
+private:
+    string exposicionA;
+public:
+    virtual ~museo();
+    museo(const TipoString& nombre, TipoCaracter color,
+          TipoEntero posX, TipoEntero posY, double calificacion, string exposicionA);
+    void setexposicionA( string _exposicionA){
+        exposicionA= _exposicionA}
+    string getexposicionA(){
+        return exposicionA;
+    }
+};
 
+#endif //PROYECTO_2_OBJETO_H
 
-
-#endif //AGREGACION_OBJETO_H
